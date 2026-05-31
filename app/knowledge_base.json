@@ -1,0 +1,2206 @@
+{
+  "solvents": [
+    {
+      "name": "Water",
+      "formula": "H2O",
+      "aliases": [
+        "water",
+        "h2o"
+      ],
+      "ghs_codes": [],
+      "boiling_point_c": 100.0,
+      "chem21_color": "green",
+      "known_incompatibilities": [
+        "water_sensitive_reagents"
+      ],
+      "guide_notes": [
+        "CHEM21: preferred solvent class where chemically feasible."
+      ]
+    },
+    {
+      "name": "Ethanol",
+      "formula": "C2H6O",
+      "aliases": [
+        "ethanol",
+        "etoh",
+        "c2h6o"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H319"
+      ],
+      "boiling_point_c": 78.4,
+      "chem21_color": "green",
+      "known_incompatibilities": [
+        "strong_acid_heat_dehydration",
+        "strong_oxidizer"
+      ],
+      "guide_notes": [
+        "CHEM21/Pfizer/GSK-style guides generally rate ethanol as preferred or usable."
+      ]
+    },
+    {
+      "name": "Ethyl acetate",
+      "formula": "C4H8O2",
+      "aliases": [
+        "ethyl acetate",
+        "etoac",
+        "c4h8o2"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H319",
+        "H336"
+      ],
+      "boiling_point_c": 77.1,
+      "chem21_color": "green",
+      "known_incompatibilities": [
+        "strong_base_hydrolysis",
+        "strong_acid_hydrolysis"
+      ],
+      "guide_notes": [
+        "Commonly listed as a preferred ester solvent in solvent selection guides."
+      ]
+    },
+    {
+      "name": "Acetone",
+      "formula": "C3H6O",
+      "aliases": [
+        "acetone",
+        "c3h6o"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H319",
+        "H336"
+      ],
+      "boiling_point_c": 56.1,
+      "chem21_color": "yellow",
+      "known_incompatibilities": [
+        "strong_base_aldol",
+        "strong_oxidizer"
+      ],
+      "guide_notes": [
+        "Commonly usable, but low boiling point and high flammability can be limiting."
+      ]
+    },
+    {
+      "name": "2-MeTHF",
+      "formula": "C5H10O",
+      "aliases": [
+        "2-methyltetrahydrofuran",
+        "2-methf",
+        "2-methyl thf",
+        "c5h10o"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H319",
+        "H335"
+      ],
+      "boiling_point_c": 80.0,
+      "chem21_color": "green",
+      "known_incompatibilities": [
+        "strong_oxidizer",
+        "peroxide_former"
+      ],
+      "guide_notes": [
+        "Often used as a greener ether alternative, with peroxide controls required."
+      ]
+    },
+    {
+      "name": "CPME",
+      "formula": "C6H12O",
+      "aliases": [
+        "cpme",
+        "cyclopentyl methyl ether",
+        "c6h12o"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H315",
+        "H319",
+        "H335"
+      ],
+      "boiling_point_c": 106.0,
+      "chem21_color": "yellow",
+      "known_incompatibilities": [
+        "strong_oxidizer",
+        "peroxide_former"
+      ],
+      "guide_notes": [
+        "Used as an ether solvent alternative; peroxide monitoring remains necessary."
+      ]
+    },
+    {
+      "name": "Acetonitrile",
+      "formula": "C2H3N",
+      "aliases": [
+        "acetonitrile",
+        "mecn",
+        "c2h3n"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H302",
+        "H312",
+        "H332",
+        "H319"
+      ],
+      "boiling_point_c": 81.6,
+      "chem21_color": "red",
+      "known_incompatibilities": [
+        "strong_acid",
+        "strong_base",
+        "strong_oxidizer"
+      ],
+      "guide_notes": [
+        "Often flagged as problematic because of toxicity and disposal concerns."
+      ]
+    },
+    {
+      "name": "Methanol",
+      "formula": "CH4O",
+      "aliases": [
+        "methanol",
+        "meoh",
+        "ch4o"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H301",
+        "H311",
+        "H331",
+        "H370"
+      ],
+      "boiling_point_c": 64.7,
+      "chem21_color": "red",
+      "known_incompatibilities": [
+        "strong_oxidizer"
+      ],
+      "guide_notes": [
+        "Generally less preferred because of acute toxicity hazards."
+      ]
+    },
+    {
+      "name": "Toluene",
+      "formula": "C7H8",
+      "aliases": [
+        "toluene",
+        "c7h8"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H304",
+        "H315",
+        "H336",
+        "H361d",
+        "H373"
+      ],
+      "boiling_point_c": 110.6,
+      "chem21_color": "red",
+      "known_incompatibilities": [
+        "strong_oxidizer",
+        "nitration_conditions"
+      ],
+      "guide_notes": [
+        "Usually discouraged where greener replacements are available."
+      ]
+    },
+    {
+      "name": "DMSO",
+      "formula": "C2H6OS",
+      "aliases": [
+        "dmso",
+        "dimethyl sulfoxide",
+        "c2h6os"
+      ],
+      "ghs_codes": [],
+      "boiling_point_c": 189.0,
+      "chem21_color": "yellow",
+      "known_incompatibilities": [
+        "acid_chloride",
+        "strong_oxidizer",
+        "skin_transport_concern"
+      ],
+      "guide_notes": [
+        "Useful polar aprotic solvent, but high boiling point complicates removal."
+      ]
+    },
+    {
+      "name": "Isopropanol",
+      "formula": "C3H8O",
+      "aliases": [
+        "isopropanol",
+        "ipa",
+        "2-propanol",
+        "c3h8o"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H319",
+        "H336"
+      ],
+      "boiling_point_c": 82.6,
+      "chem21_color": "green",
+      "known_incompatibilities": [
+        "strong_acid_heat_dehydration",
+        "strong_oxidizer"
+      ],
+      "guide_notes": [
+        "Commonly acceptable alcohol solvent where secondary alcohol reactivity is not problematic."
+      ]
+    },
+    {
+      "name": "n-Butanol",
+      "formula": "C4H10O",
+      "aliases": [
+        "butanol",
+        "n-butanol",
+        "1-butanol",
+        "c4h10o"
+      ],
+      "ghs_codes": [
+        "H226",
+        "H302",
+        "H315",
+        "H318",
+        "H335",
+        "H336"
+      ],
+      "boiling_point_c": 117.7,
+      "chem21_color": "yellow",
+      "known_incompatibilities": [
+        "strong_acid_heat_dehydration",
+        "strong_oxidizer"
+      ],
+      "guide_notes": [
+        "Higher boiling alcohol; can be useful but removal and irritation hazards matter."
+      ]
+    },
+    {
+      "name": "Heptane",
+      "formula": "C7H16",
+      "aliases": [
+        "heptane",
+        "n-heptane",
+        "c7h16"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H304",
+        "H315",
+        "H336",
+        "H410"
+      ],
+      "boiling_point_c": 98.4,
+      "chem21_color": "yellow",
+      "known_incompatibilities": [
+        "strong_oxidizer"
+      ],
+      "guide_notes": [
+        "Often preferred over hexane for some nonpolar operations, but still flammable."
+      ]
+    },
+    {
+      "name": "Hexane",
+      "formula": "C6H14",
+      "aliases": [
+        "hexane",
+        "n-hexane",
+        "c6h14"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H304",
+        "H315",
+        "H336",
+        "H361f",
+        "H373",
+        "H411"
+      ],
+      "boiling_point_c": 68.7,
+      "chem21_color": "red",
+      "known_incompatibilities": [
+        "strong_oxidizer"
+      ],
+      "guide_notes": [
+        "Generally discouraged; heptane or other options are often preferred."
+      ]
+    },
+    {
+      "name": "Methyl tert-butyl ether",
+      "formula": "C5H12O",
+      "aliases": [
+        "mtbe",
+        "methyl tert-butyl ether",
+        "c5h12o"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H315",
+        "H319",
+        "H335"
+      ],
+      "boiling_point_c": 55.2,
+      "chem21_color": "yellow",
+      "known_incompatibilities": [
+        "strong_oxidizer",
+        "peroxide_former"
+      ],
+      "guide_notes": [
+        "Ether solvent with peroxide and flammability controls required."
+      ]
+    },
+    {
+      "name": "Tetrahydrofuran",
+      "formula": "C4H8O",
+      "aliases": [
+        "thf",
+        "tetrahydrofuran",
+        "c4h8o"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H319",
+        "H335",
+        "H351"
+      ],
+      "boiling_point_c": 66.0,
+      "chem21_color": "red",
+      "known_incompatibilities": [
+        "strong_oxidizer",
+        "peroxide_former"
+      ],
+      "guide_notes": [
+        "Often discouraged where 2-MeTHF or CPME can substitute."
+      ]
+    },
+    {
+      "name": "Dimethyl carbonate",
+      "formula": "C3H6O3",
+      "aliases": [
+        "dimethyl carbonate",
+        "dmc",
+        "c3h6o3"
+      ],
+      "ghs_codes": [
+        "H225"
+      ],
+      "boiling_point_c": 90.0,
+      "chem21_color": "green",
+      "known_incompatibilities": [
+        "strong_base_transesterification",
+        "strong_acid_hydrolysis"
+      ],
+      "guide_notes": [
+        "Often considered a greener solvent/reagent candidate when compatible."
+      ]
+    },
+    {
+      "name": "Propylene carbonate",
+      "formula": "C4H6O3",
+      "aliases": [
+        "propylene carbonate",
+        "pc",
+        "c4h6o3"
+      ],
+      "ghs_codes": [
+        "H319"
+      ],
+      "boiling_point_c": 242.0,
+      "chem21_color": "green",
+      "known_incompatibilities": [
+        "strong_base_hydrolysis"
+      ],
+      "guide_notes": [
+        "Low volatility polar solvent; high boiling point can complicate isolation."
+      ]
+    },
+    {
+      "name": "Ethylene glycol",
+      "formula": "C2H6O2",
+      "aliases": [
+        "ethylene glycol",
+        "eg",
+        "c2h6o2"
+      ],
+      "ghs_codes": [
+        "H302"
+      ],
+      "boiling_point_c": 197.3,
+      "chem21_color": "yellow",
+      "known_incompatibilities": [
+        "strong_oxidizer"
+      ],
+      "guide_notes": [
+        "High boiling polar protic solvent; toxicity and removal should be considered."
+      ]
+    },
+    {
+      "name": "Dichloromethane",
+      "formula": "CH2Cl2",
+      "aliases": [
+        "dichloromethane",
+        "dcm",
+        "methylene chloride",
+        "ch2cl2"
+      ],
+      "ghs_codes": [
+        "H315",
+        "H319",
+        "H336",
+        "H351"
+      ],
+      "boiling_point_c": 39.6,
+      "chem21_color": "red",
+      "known_incompatibilities": [
+        "strong_base",
+        "strong_oxidizer"
+      ],
+      "guide_notes": [
+        "Usually discouraged because of health and environmental concerns."
+      ]
+    },
+    {
+      "name": "Chloroform",
+      "formula": "CHCl3",
+      "aliases": [
+        "chloroform",
+        "chcl3"
+      ],
+      "ghs_codes": [
+        "H302",
+        "H315",
+        "H319",
+        "H331",
+        "H351",
+        "H361d",
+        "H372"
+      ],
+      "boiling_point_c": 61.2,
+      "chem21_color": "red",
+      "known_incompatibilities": [
+        "strong_base",
+        "strong_oxidizer"
+      ],
+      "guide_notes": [
+        "Strongly discouraged in modern solvent selection frameworks."
+      ]
+    },
+    {
+      "name": "N,N-Dimethylformamide",
+      "formula": "C3H7NO",
+      "aliases": [
+        "dmf",
+        "n,n-dimethylformamide",
+        "dimethylformamide",
+        "c3h7no"
+      ],
+      "ghs_codes": [
+        "H312",
+        "H319",
+        "H332",
+        "H360D"
+      ],
+      "boiling_point_c": 153.0,
+      "chem21_color": "red",
+      "known_incompatibilities": [
+        "strong_acid",
+        "strong_base",
+        "acid_chloride"
+      ],
+      "guide_notes": [
+        "Often targeted for replacement because of reproductive toxicity concerns."
+      ]
+    },
+    {
+      "name": "N-Methyl-2-pyrrolidone",
+      "formula": "C5H9NO",
+      "aliases": [
+        "nmp",
+        "n-methyl-2-pyrrolidone",
+        "c5h9no"
+      ],
+      "ghs_codes": [
+        "H315",
+        "H319",
+        "H335",
+        "H360D"
+      ],
+      "boiling_point_c": 202.0,
+      "chem21_color": "red",
+      "known_incompatibilities": [
+        "strong_oxidizer"
+      ],
+      "guide_notes": [
+        "Often discouraged because of reproductive toxicity concerns."
+      ]
+    },
+    {
+      "name": "Cyclopentyl methyl ether",
+      "formula": "C6H12O",
+      "aliases": [
+        "cyclopentyl methyl ether",
+        "cpme"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H315",
+        "H319",
+        "H335"
+      ],
+      "boiling_point_c": 106.0,
+      "chem21_color": "yellow",
+      "known_incompatibilities": [
+        "strong_oxidizer",
+        "peroxide_former"
+      ],
+      "guide_notes": [
+        "Same solvent family as CPME entry; useful alias record for parser robustness."
+      ]
+    },
+    {
+      "name": "tert-Butyl acetate",
+      "formula": "C6H12O2",
+      "aliases": [
+        "tert-butyl acetate",
+        "t-butyl acetate",
+        "tbac",
+        "c6h12o2"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H319",
+        "H336"
+      ],
+      "boiling_point_c": 98.0,
+      "chem21_color": "green",
+      "known_incompatibilities": [
+        "strong_acid_hydrolysis",
+        "strong_base_hydrolysis"
+      ],
+      "guide_notes": [
+        "Ester solvent option sometimes used as a greener replacement candidate."
+      ]
+    },
+    {
+      "name": "1,4-Dioxane",
+      "formula": "C4H8O2",
+      "aliases": [
+        "dioxane"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H313",
+        "H315",
+        "H319",
+        "H331",
+        "H332",
+        "H335",
+        "H336",
+        "H350",
+        "H351",
+        "H370",
+        "H372",
+        "H373"
+      ],
+      "boiling_point_c": 101.1,
+      "chem21_color": "red",
+      "known_incompatibilities": [
+        "peroxide_former",
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 31275,
+      "canonical_smiles": null,
+      "molecular_weight": "88.11",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Diethyl ether",
+      "formula": "C4H10O",
+      "aliases": [
+        "ether",
+        "et2o"
+      ],
+      "ghs_codes": [
+        "H224",
+        "H302",
+        "H305",
+        "H316",
+        "H320",
+        "H335",
+        "H336",
+        "H361",
+        "H372"
+      ],
+      "boiling_point_c": 34.6,
+      "chem21_color": "red",
+      "known_incompatibilities": [
+        "peroxide_former",
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 3283,
+      "canonical_smiles": null,
+      "molecular_weight": "74.12",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Diisopropyl ether",
+      "formula": "C6H14O",
+      "aliases": [
+        "diisopropyl ether",
+        "dipe"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H316",
+        "H319",
+        "H335",
+        "H336",
+        "H361",
+        "H371",
+        "H402",
+        "H412"
+      ],
+      "boiling_point_c": 68.5,
+      "chem21_color": "red",
+      "known_incompatibilities": [
+        "peroxide_former",
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 7914,
+      "canonical_smiles": null,
+      "molecular_weight": "102.17",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Methyl acetate",
+      "formula": "C3H6O2",
+      "aliases": [
+        "meoac"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H319",
+        "H320",
+        "H335",
+        "H336",
+        "H370",
+        "H372"
+      ],
+      "boiling_point_c": 56.9,
+      "chem21_color": "green",
+      "known_incompatibilities": [
+        "strong_acid_hydrolysis",
+        "strong_base_hydrolysis"
+      ],
+      "pubchem_cid": 6584,
+      "canonical_smiles": null,
+      "molecular_weight": "74.08",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Isopropyl acetate",
+      "formula": "C5H10O2",
+      "aliases": [
+        "iproac"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H303",
+        "H305",
+        "H315",
+        "H319",
+        "H320",
+        "H332",
+        "H335",
+        "H336",
+        "H371",
+        "H373"
+      ],
+      "boiling_point_c": 88.6,
+      "chem21_color": "green",
+      "known_incompatibilities": [
+        "strong_acid_hydrolysis",
+        "strong_base_hydrolysis"
+      ],
+      "pubchem_cid": 7915,
+      "canonical_smiles": null,
+      "molecular_weight": "102.13",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Butyl acetate",
+      "formula": "C6H12O2",
+      "aliases": [
+        "n-butyl acetate"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H226",
+        "H316",
+        "H320",
+        "H331",
+        "H332",
+        "H335",
+        "H336",
+        "H370",
+        "H371",
+        "H402"
+      ],
+      "boiling_point_c": 126.1,
+      "chem21_color": "green",
+      "known_incompatibilities": [
+        "strong_acid_hydrolysis",
+        "strong_base_hydrolysis"
+      ],
+      "pubchem_cid": 31272,
+      "canonical_smiles": null,
+      "molecular_weight": "116.16",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Acetic acid",
+      "formula": "C2H4O2",
+      "aliases": [
+        "glacial acetic acid"
+      ],
+      "ghs_codes": [
+        "H226",
+        "H303",
+        "H312",
+        "H314",
+        "H318",
+        "H334",
+        "H370",
+        "H371"
+      ],
+      "boiling_point_c": 118.1,
+      "chem21_color": "yellow",
+      "known_incompatibilities": [
+        "strong_base"
+      ],
+      "pubchem_cid": 176,
+      "canonical_smiles": null,
+      "molecular_weight": "60.05",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Formic acid",
+      "formula": "CH2O2",
+      "aliases": [],
+      "ghs_codes": [
+        "H226",
+        "H290",
+        "H302",
+        "H314",
+        "H318",
+        "H331",
+        "H332",
+        "H335",
+        "H361",
+        "H370",
+        "H372",
+        "H373",
+        "H402"
+      ],
+      "boiling_point_c": 100.8,
+      "chem21_color": "yellow",
+      "known_incompatibilities": [
+        "strong_base",
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 284,
+      "canonical_smiles": null,
+      "molecular_weight": "46.025",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Methyl ethyl ketone",
+      "formula": "C4H8O",
+      "aliases": [
+        "mek",
+        "2-butanone"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H303",
+        "H305",
+        "H315",
+        "H319",
+        "H320",
+        "H332",
+        "H333",
+        "H335",
+        "H336",
+        "H370",
+        "H371",
+        "H372"
+      ],
+      "boiling_point_c": 79.6,
+      "chem21_color": "yellow",
+      "known_incompatibilities": [
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 6569,
+      "canonical_smiles": null,
+      "molecular_weight": "72.11",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Methyl isobutyl ketone",
+      "formula": "C6H12O",
+      "aliases": [
+        "mibk"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H303",
+        "H305",
+        "H313",
+        "H319",
+        "H320",
+        "H331",
+        "H332",
+        "H335",
+        "H336",
+        "H350",
+        "H351",
+        "H372"
+      ],
+      "boiling_point_c": 116.0,
+      "chem21_color": "yellow",
+      "known_incompatibilities": [
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 7909,
+      "canonical_smiles": null,
+      "molecular_weight": "100.16",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Cyclohexanone",
+      "formula": "C6H10O",
+      "aliases": [],
+      "ghs_codes": [
+        "H226",
+        "H302",
+        "H305",
+        "H311",
+        "H312",
+        "H315",
+        "H317",
+        "H318",
+        "H319",
+        "H331",
+        "H332",
+        "H335",
+        "H336",
+        "H341",
+        "H351",
+        "H361",
+        "H370",
+        "H371",
+        "H372"
+      ],
+      "boiling_point_c": 155.6,
+      "chem21_color": "yellow",
+      "known_incompatibilities": [
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 7967,
+      "canonical_smiles": null,
+      "molecular_weight": "98.14",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Cyclohexane",
+      "formula": "C6H12",
+      "aliases": [],
+      "ghs_codes": [
+        "H225",
+        "H304",
+        "H305",
+        "H315",
+        "H319",
+        "H335",
+        "H336",
+        "H361",
+        "H371",
+        "H400",
+        "H401",
+        "H410",
+        "H411",
+        "H412"
+      ],
+      "boiling_point_c": 80.7,
+      "chem21_color": "yellow",
+      "known_incompatibilities": [
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 8078,
+      "canonical_smiles": null,
+      "molecular_weight": "84.16",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Methylcyclohexane",
+      "formula": "C7H14",
+      "aliases": [],
+      "ghs_codes": [
+        "H225",
+        "H302",
+        "H304",
+        "H315",
+        "H316",
+        "H320",
+        "H332",
+        "H335",
+        "H336",
+        "H373",
+        "H400",
+        "H410",
+        "H411"
+      ],
+      "boiling_point_c": 100.9,
+      "chem21_color": "yellow",
+      "known_incompatibilities": [
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 7962,
+      "canonical_smiles": null,
+      "molecular_weight": "98.19",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Isooctane",
+      "formula": "C8H18",
+      "aliases": [
+        "2,2,4-trimethylpentane"
+      ],
+      "ghs_codes": [
+        "H224",
+        "H225",
+        "H302",
+        "H304",
+        "H315",
+        "H335",
+        "H336",
+        "H400",
+        "H410"
+      ],
+      "boiling_point_c": 99.2,
+      "chem21_color": "yellow",
+      "known_incompatibilities": [
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 10907,
+      "canonical_smiles": null,
+      "molecular_weight": "114.23",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Pentane",
+      "formula": "C5H12",
+      "aliases": [
+        "n-pentane"
+      ],
+      "ghs_codes": [
+        "H224",
+        "H225",
+        "H304",
+        "H320",
+        "H335",
+        "H336",
+        "H401",
+        "H411"
+      ],
+      "boiling_point_c": 36.1,
+      "chem21_color": "red",
+      "known_incompatibilities": [
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 8003,
+      "canonical_smiles": null,
+      "molecular_weight": "72.15",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Dimethyl sulfone",
+      "formula": "C2H6O2S",
+      "aliases": [
+        "msm"
+      ],
+      "ghs_codes": [],
+      "boiling_point_c": 238.0,
+      "chem21_color": "yellow",
+      "known_incompatibilities": [
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 6213,
+      "canonical_smiles": null,
+      "molecular_weight": "94.14",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Sulfolane",
+      "formula": "C4H8O2S",
+      "aliases": [],
+      "ghs_codes": [
+        "H302",
+        "H320",
+        "H360",
+        "H361"
+      ],
+      "boiling_point_c": 285.0,
+      "chem21_color": "yellow",
+      "known_incompatibilities": [
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 31347,
+      "canonical_smiles": null,
+      "molecular_weight": "120.17",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Dimethylacetamide",
+      "formula": "C4H9NO",
+      "aliases": [
+        "dmac",
+        "n,n-dimethylacetamide"
+      ],
+      "ghs_codes": [
+        "H227",
+        "H303",
+        "H312",
+        "H313",
+        "H316",
+        "H319",
+        "H320",
+        "H331",
+        "H332",
+        "H336",
+        "H350",
+        "H351",
+        "H360",
+        "H360D",
+        "H370",
+        "H372",
+        "H373"
+      ],
+      "boiling_point_c": 165.0,
+      "chem21_color": "red",
+      "known_incompatibilities": [
+        "strong_acid",
+        "strong_base"
+      ],
+      "pubchem_cid": 31374,
+      "canonical_smiles": null,
+      "molecular_weight": "87.12",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "1,3-Dimethyl-2-imidazolidinone",
+      "formula": "C5H10N2O",
+      "aliases": [
+        "dmi"
+      ],
+      "ghs_codes": [
+        "H302",
+        "H311",
+        "H315",
+        "H318",
+        "H319",
+        "H361",
+        "H373",
+        "H571"
+      ],
+      "boiling_point_c": 225.0,
+      "chem21_color": "red",
+      "known_incompatibilities": [
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 6661,
+      "canonical_smiles": null,
+      "molecular_weight": "114.15",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "1,3-Dimethyl-3,4,5,6-tetrahydro-2-pyrimidinone",
+      "formula": "C6H12N2O",
+      "aliases": [
+        "dmpu"
+      ],
+      "ghs_codes": [
+        "H302",
+        "H317",
+        "H318",
+        "H361",
+        "H361f",
+        "H572"
+      ],
+      "boiling_point_c": 246.0,
+      "chem21_color": "red",
+      "known_incompatibilities": [
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 81646,
+      "canonical_smiles": null,
+      "molecular_weight": "128.17",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Pyridine",
+      "formula": "C5H5N",
+      "aliases": [],
+      "ghs_codes": [
+        "H225",
+        "H302",
+        "H304",
+        "H311",
+        "H312",
+        "H314",
+        "H315",
+        "H318",
+        "H319",
+        "H332",
+        "H335",
+        "H336",
+        "H351",
+        "H361",
+        "H370",
+        "H372",
+        "H373",
+        "H400",
+        "H410"
+      ],
+      "boiling_point_c": 115.2,
+      "chem21_color": "red",
+      "known_incompatibilities": [
+        "strong_acid",
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 1049,
+      "canonical_smiles": null,
+      "molecular_weight": "79.10",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Morpholine",
+      "formula": "C4H9NO",
+      "aliases": [],
+      "ghs_codes": [
+        "H226",
+        "H290",
+        "H302",
+        "H311",
+        "H312",
+        "H314",
+        "H318",
+        "H319",
+        "H331",
+        "H332",
+        "H341",
+        "H370",
+        "H372",
+        "H402",
+        "H411"
+      ],
+      "boiling_point_c": 128.0,
+      "chem21_color": "red",
+      "known_incompatibilities": [
+        "strong_acid",
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 8083,
+      "canonical_smiles": null,
+      "molecular_weight": "87.12",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Anisole",
+      "formula": "C7H8O",
+      "aliases": [
+        "methoxybenzene"
+      ],
+      "ghs_codes": [
+        "H226",
+        "H315",
+        "H319",
+        "H336"
+      ],
+      "boiling_point_c": 154.0,
+      "chem21_color": "yellow",
+      "known_incompatibilities": [
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 7519,
+      "canonical_smiles": null,
+      "molecular_weight": "108.14",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Benzyl alcohol",
+      "formula": "C7H8O",
+      "aliases": [],
+      "ghs_codes": [
+        "H227",
+        "H302",
+        "H312",
+        "H315",
+        "H317",
+        "H319",
+        "H331",
+        "H332",
+        "H335",
+        "H336",
+        "H370",
+        "H372",
+        "H401"
+      ],
+      "boiling_point_c": 205.3,
+      "chem21_color": "yellow",
+      "known_incompatibilities": [
+        "strong_acid_heat_dehydration",
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 244,
+      "canonical_smiles": null,
+      "molecular_weight": "108.14",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Ethyl lactate",
+      "formula": "C5H10O3",
+      "aliases": [],
+      "ghs_codes": [
+        "H226",
+        "H318",
+        "H319",
+        "H328",
+        "H335"
+      ],
+      "boiling_point_c": 154.0,
+      "chem21_color": "green",
+      "known_incompatibilities": [
+        "strong_acid_hydrolysis",
+        "strong_base_hydrolysis"
+      ],
+      "pubchem_cid": 7344,
+      "canonical_smiles": null,
+      "molecular_weight": "118.13",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Limonene",
+      "formula": "C10H16",
+      "aliases": [
+        "d-limonene"
+      ],
+      "ghs_codes": [
+        "H226",
+        "H304",
+        "H315",
+        "H317",
+        "H319",
+        "H400",
+        "H410"
+      ],
+      "boiling_point_c": 176.0,
+      "chem21_color": "green",
+      "known_incompatibilities": [
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 22311,
+      "canonical_smiles": null,
+      "molecular_weight": "136.23",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Glycerol",
+      "formula": "C3H8O3",
+      "aliases": [
+        "glycerine"
+      ],
+      "ghs_codes": [],
+      "boiling_point_c": 290.0,
+      "chem21_color": "green",
+      "known_incompatibilities": [
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 753,
+      "canonical_smiles": null,
+      "molecular_weight": "92.09",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Polyethylene glycol 400",
+      "formula": null,
+      "aliases": [
+        "peg 400"
+      ],
+      "ghs_codes": [],
+      "boiling_point_c": 250.0,
+      "chem21_color": "green",
+      "known_incompatibilities": [
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": null,
+      "canonical_smiles": null,
+      "molecular_weight": null,
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Tert-butanol",
+      "formula": "C4H10O",
+      "aliases": [
+        "tert-butyl alcohol",
+        "t-butanol"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H228",
+        "H303",
+        "H316",
+        "H318",
+        "H319",
+        "H332",
+        "H335",
+        "H336",
+        "H351",
+        "H361",
+        "H371"
+      ],
+      "boiling_point_c": 82.2,
+      "chem21_color": "yellow",
+      "known_incompatibilities": [
+        "strong_acid_heat_dehydration",
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 6386,
+      "canonical_smiles": null,
+      "molecular_weight": "74.12",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Acetophenone",
+      "formula": "C8H8O",
+      "aliases": [],
+      "ghs_codes": [
+        "H227",
+        "H302",
+        "H315",
+        "H316",
+        "H318",
+        "H319",
+        "H335",
+        "H336",
+        "H360",
+        "H361"
+      ],
+      "boiling_point_c": 202.0,
+      "chem21_color": "yellow",
+      "known_incompatibilities": [
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 7410,
+      "canonical_smiles": null,
+      "molecular_weight": "120.15",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Benzotrifluoride",
+      "formula": "C7H5F3",
+      "aliases": [
+        "btf"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H332",
+        "H401",
+        "H411"
+      ],
+      "boiling_point_c": 102.0,
+      "chem21_color": "yellow",
+      "known_incompatibilities": [
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 7368,
+      "canonical_smiles": null,
+      "molecular_weight": "146.11",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Trifluorotoluene",
+      "formula": null,
+      "aliases": [
+        "benzotrifluoride"
+      ],
+      "ghs_codes": [],
+      "boiling_point_c": 102.0,
+      "chem21_color": "yellow",
+      "known_incompatibilities": [
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": null,
+      "canonical_smiles": null,
+      "molecular_weight": null,
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Carbon tetrachloride",
+      "formula": "CCl4",
+      "aliases": [
+        "tetrachloromethane"
+      ],
+      "ghs_codes": [
+        "H301",
+        "H303",
+        "H311",
+        "H315",
+        "H317",
+        "H319",
+        "H331",
+        "H332",
+        "H350",
+        "H351",
+        "H360",
+        "H361",
+        "H370",
+        "H372",
+        "H373",
+        "H400",
+        "H402",
+        "H411",
+        "H412",
+        "H420"
+      ],
+      "boiling_point_c": 76.7,
+      "chem21_color": "red",
+      "known_incompatibilities": [
+        "strong_base",
+        "alkali_metals"
+      ],
+      "pubchem_cid": 5943,
+      "canonical_smiles": null,
+      "molecular_weight": "153.8",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Tetrachloroethylene",
+      "formula": "C2Cl4",
+      "aliases": [
+        "perchloroethylene"
+      ],
+      "ghs_codes": [
+        "H305",
+        "H313",
+        "H314",
+        "H315",
+        "H317",
+        "H319",
+        "H320",
+        "H332",
+        "H336",
+        "H350",
+        "H351",
+        "H361",
+        "H362",
+        "H370",
+        "H372",
+        "H373",
+        "H401",
+        "H411"
+      ],
+      "boiling_point_c": 121.1,
+      "chem21_color": "red",
+      "known_incompatibilities": [
+        "strong_base",
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 31373,
+      "canonical_smiles": null,
+      "molecular_weight": "165.8",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "1,2-Dichloroethane",
+      "formula": "C2H4Cl2",
+      "aliases": [
+        "ethylene dichloride"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H302",
+        "H304",
+        "H313",
+        "H315",
+        "H319",
+        "H320",
+        "H331",
+        "H335",
+        "H336",
+        "H341",
+        "H350",
+        "H351",
+        "H370",
+        "H372",
+        "H373",
+        "H402"
+      ],
+      "boiling_point_c": 83.5,
+      "chem21_color": "red",
+      "known_incompatibilities": [
+        "strong_base",
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 11,
+      "canonical_smiles": null,
+      "molecular_weight": "98.96",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Nitromethane",
+      "formula": "CH3NO2",
+      "aliases": [],
+      "ghs_codes": [
+        "H226",
+        "H302",
+        "H316",
+        "H319",
+        "H332",
+        "H335",
+        "H336",
+        "H351",
+        "H361d",
+        "H370",
+        "H371",
+        "H372",
+        "H373",
+        "H402",
+        "H412"
+      ],
+      "boiling_point_c": 101.2,
+      "chem21_color": "red",
+      "known_incompatibilities": [
+        "strong_base",
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 6375,
+      "canonical_smiles": null,
+      "molecular_weight": "61.040",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Nitrobenzene",
+      "formula": "C6H5NO2",
+      "aliases": [],
+      "ghs_codes": [
+        "H227",
+        "H301",
+        "H302",
+        "H311",
+        "H316",
+        "H320",
+        "H331",
+        "H332",
+        "H336",
+        "H351",
+        "H360",
+        "H360F",
+        "H361",
+        "H361f",
+        "H370",
+        "H372",
+        "H401",
+        "H411",
+        "H412"
+      ],
+      "boiling_point_c": 210.9,
+      "chem21_color": "red",
+      "known_incompatibilities": [
+        "strong_base",
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 7416,
+      "canonical_smiles": null,
+      "molecular_weight": "123.11",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Carbon disulfide",
+      "formula": "CS2",
+      "aliases": [],
+      "ghs_codes": [
+        "H224",
+        "H225",
+        "H303",
+        "H305",
+        "H315",
+        "H319",
+        "H331",
+        "H332",
+        "H335",
+        "H336",
+        "H341",
+        "H360",
+        "H361",
+        "H362",
+        "H370",
+        "H371",
+        "H372",
+        "H401",
+        "H411"
+      ],
+      "boiling_point_c": 46.3,
+      "chem21_color": "red",
+      "known_incompatibilities": [
+        "strong_oxidizer"
+      ],
+      "pubchem_cid": 6348,
+      "canonical_smiles": null,
+      "molecular_weight": "76.15",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Diethyl carbonate",
+      "formula": "C5H10O3",
+      "aliases": [
+        "dec"
+      ],
+      "ghs_codes": [
+        "H226",
+        "H315",
+        "H319",
+        "H335"
+      ],
+      "boiling_point_c": 126.0,
+      "chem21_color": "green",
+      "known_incompatibilities": [
+        "strong_base_transesterification",
+        "strong_acid_hydrolysis"
+      ],
+      "pubchem_cid": 7766,
+      "canonical_smiles": null,
+      "molecular_weight": "118.13",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    },
+    {
+      "name": "Dipropyl carbonate",
+      "formula": "C7H14O3",
+      "aliases": [],
+      "ghs_codes": [
+        "H226",
+        "H302",
+        "H312",
+        "H315",
+        "H319",
+        "H332",
+        "H335"
+      ],
+      "boiling_point_c": 167.0,
+      "chem21_color": "green",
+      "known_incompatibilities": [
+        "strong_base_transesterification",
+        "strong_acid_hydrolysis"
+      ],
+      "pubchem_cid": 69344,
+      "canonical_smiles": null,
+      "molecular_weight": "146.18",
+      "data_sources": [
+        "PubChem PUG REST/PUG View for formula, CID, SMILES, molecular weight, and hazard-code text when available",
+        "Curated solvent guide category and boiling point seed list for hackathon prototype"
+      ],
+      "guide_notes": [
+        "Imported as public-data-backed prototype solvent entry; verify before production use."
+      ]
+    }
+  ],
+  "catalysts": [
+    {
+      "formula": "H2SO4",
+      "name": "Sulfuric acid",
+      "roles": [
+        "acid_catalyst",
+        "strong_acid"
+      ],
+      "ghs_codes": [
+        "H290",
+        "H314"
+      ],
+      "known_incompatibilities": [
+        "alcohol_heat_dehydration",
+        "strong_base"
+      ]
+    },
+    {
+      "formula": "HCl",
+      "name": "Hydrochloric acid",
+      "roles": [
+        "acid_catalyst",
+        "strong_acid"
+      ],
+      "ghs_codes": [
+        "H290",
+        "H314",
+        "H335"
+      ],
+      "known_incompatibilities": [
+        "strong_base"
+      ]
+    },
+    {
+      "formula": "NaOH",
+      "name": "Sodium hydroxide",
+      "roles": [
+        "base_catalyst",
+        "strong_base"
+      ],
+      "ghs_codes": [
+        "H290",
+        "H314"
+      ],
+      "known_incompatibilities": [
+        "ester_hydrolysis",
+        "strong_acid"
+      ]
+    },
+    {
+      "formula": "K2CO3",
+      "name": "Potassium carbonate",
+      "roles": [
+        "base_catalyst",
+        "weak_base"
+      ],
+      "ghs_codes": [
+        "H319"
+      ],
+      "known_incompatibilities": [
+        "strong_acid"
+      ]
+    },
+    {
+      "formula": "TsOH",
+      "name": "p-Toluenesulfonic acid",
+      "roles": [
+        "acid_catalyst",
+        "strong_acid"
+      ],
+      "ghs_codes": [
+        "H314"
+      ],
+      "known_incompatibilities": [
+        "alcohol_heat_dehydration",
+        "strong_base"
+      ]
+    },
+    {
+      "formula": "AcOH",
+      "name": "Acetic acid",
+      "roles": [
+        "acid_catalyst",
+        "weak_acid"
+      ],
+      "ghs_codes": [
+        "H226",
+        "H314"
+      ],
+      "known_incompatibilities": [
+        "strong_base"
+      ]
+    },
+    {
+      "formula": "Et3N",
+      "name": "Triethylamine",
+      "roles": [
+        "base_catalyst",
+        "weak_base"
+      ],
+      "ghs_codes": [
+        "H225",
+        "H302",
+        "H312",
+        "H314",
+        "H332"
+      ],
+      "known_incompatibilities": [
+        "strong_acid"
+      ]
+    },
+    {
+      "formula": "DBU",
+      "name": "1,8-Diazabicyclo[5.4.0]undec-7-ene",
+      "roles": [
+        "base_catalyst",
+        "strong_base"
+      ],
+      "ghs_codes": [
+        "H302",
+        "H314"
+      ],
+      "known_incompatibilities": [
+        "strong_acid",
+        "ester_hydrolysis"
+      ]
+    },
+    {
+      "formula": "TBD",
+      "name": "1,5,7-Triazabicyclo[4.4.0]dec-5-ene",
+      "roles": [
+        "base_catalyst",
+        "strong_base"
+      ],
+      "ghs_codes": [
+        "H302",
+        "H314"
+      ],
+      "known_incompatibilities": [
+        "strong_acid",
+        "ester_hydrolysis"
+      ]
+    },
+    {
+      "formula": "Pd/C",
+      "name": "Palladium on carbon",
+      "roles": [
+        "hydrogenation_catalyst",
+        "metal_catalyst"
+      ],
+      "ghs_codes": [
+        "H228"
+      ],
+      "known_incompatibilities": [
+        "strong_oxidizer",
+        "air_dry_pyrophoric_risk"
+      ]
+    }
+  ],
+  "reported_replacements": [
+    {
+      "from_solvent": "Acetone",
+      "to_solvent": "Ethyl acetate",
+      "status": "Literature reported",
+      "validation_status": "Published",
+      "note": "Solvent selection guides commonly list ethyl acetate as a preferred replacement candidate for some polar organic workups and reactions."
+    },
+    {
+      "from_solvent": "Acetone",
+      "to_solvent": "2-MeTHF",
+      "status": "Theoretically compatible",
+      "validation_status": "Predicted (compatible)",
+      "note": "2-MeTHF is a guide-supported greener ether solvent candidate, subject to peroxide controls and reaction-specific validation."
+    },
+    {
+      "from_solvent": "Acetonitrile",
+      "to_solvent": "Ethanol",
+      "status": "Requires experiment",
+      "validation_status": "Experimental required",
+      "note": "Ethanol may lower acute toxicity concerns but polarity and substrate solubility must be experimentally checked."
+    },
+    {
+      "from_solvent": "Methanol",
+      "to_solvent": "Ethanol",
+      "status": "Literature reported",
+      "validation_status": "Published",
+      "note": "Ethanol is commonly preferred over methanol where chemistry and solubility allow."
+    },
+    {
+      "from_solvent": "Toluene",
+      "to_solvent": "2-MeTHF",
+      "status": "Theoretically compatible",
+      "validation_status": "Predicted (compatible)",
+      "note": "2-MeTHF can sometimes replace hydrocarbon or ether media, subject to compatibility checks."
+    },
+    {
+      "from_solvent": "Hexane",
+      "to_solvent": "Heptane",
+      "status": "Literature reported",
+      "validation_status": "Published",
+      "note": "Heptane is commonly preferred over n-hexane in solvent replacement discussions because it avoids n-hexane neurotoxicity concerns."
+    },
+    {
+      "from_solvent": "Tetrahydrofuran",
+      "to_solvent": "2-MeTHF",
+      "status": "Literature reported",
+      "validation_status": "Published",
+      "note": "2-MeTHF is widely discussed as a greener THF replacement where peroxide and process controls are acceptable."
+    },
+    {
+      "from_solvent": "Dichloromethane",
+      "to_solvent": "Ethyl acetate",
+      "status": "Requires experiment",
+      "validation_status": "Experimental required",
+      "note": "Ethyl acetate may replace DCM in some extraction or chromatography contexts, but solvent strength and compatibility must be checked."
+    },
+    {
+      "from_solvent": "N,N-Dimethylformamide",
+      "to_solvent": "Propylene carbonate",
+      "status": "Theoretically compatible",
+      "validation_status": "Predicted (compatible)",
+      "note": "Propylene carbonate is a lower-volatility polar solvent candidate for some DMF replacement studies."
+    },
+    {
+      "from_solvent": "N-Methyl-2-pyrrolidone",
+      "to_solvent": "Dimethyl carbonate",
+      "status": "Requires experiment",
+      "validation_status": "Experimental required",
+      "note": "Dimethyl carbonate is a greener candidate but polarity and substrate solubility can differ strongly from NMP."
+    },
+    {
+      "from_solvent": "Chloroform",
+      "to_solvent": "Ethyl acetate",
+      "status": "Requires experiment",
+      "validation_status": "Experimental required",
+      "note": "Ethyl acetate may be considered for some workup/extraction substitutions, with process-specific validation required."
+    },
+    {
+      "from_solvent": "Methanol",
+      "to_solvent": "Isopropanol",
+      "status": "Requires experiment",
+      "validation_status": "Experimental required",
+      "note": "Isopropanol can reduce acute toxicity concerns relative to methanol, but reactivity and solubility may change."
+    },
+    {
+      "from_solvent": "Acetonitrile",
+      "to_solvent": "Dimethyl carbonate",
+      "status": "Theoretically compatible",
+      "validation_status": "Predicted (compatible)",
+      "note": "Dimethyl carbonate is sometimes explored as a greener polar aprotic-like replacement candidate."
+    }
+  ]
+}

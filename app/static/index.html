@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GreenChem Navigator</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar" aria-label="Analysis input">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div>
+            <p class="eyebrow">GreenChem Navigator</p>
+            <h1>Solvent replacement workspace</h1>
+          </div>
+        </div>
+
+        <div class="status-stack">
+          <div class="status-pill" id="apiStatus">
+            <span class="dot dot-idle"></span>
+            <span>Checking API</span>
+          </div>
+          <div class="status-pill" id="modelStatus">
+            <span class="dot dot-idle"></span>
+            <span>Checking model</span>
+          </div>
+        </div>
+
+        <form id="analysisForm" class="analysis-form">
+          <div class="field-section">
+            <div class="field-section-title">Formula components</div>
+            <div class="field-grid compact">
+              <label>
+                Water amount
+                <input id="waterAmount" type="text" value="20" autocomplete="off">
+              </label>
+              <label>
+                Unit
+                <input id="waterUnit" type="text" value="mL" autocomplete="off">
+              </label>
+            </div>
+            <div class="field-grid compact">
+              <label>
+                Solvent amount
+                <input id="solventAmount" type="text" value="10" autocomplete="off">
+              </label>
+              <label>
+                Solvent
+                <input id="solventName" type="text" value="Acetone" autocomplete="off">
+              </label>
+            </div>
+            <div class="field-grid compact">
+              <label>
+                Catalyst amount
+                <input id="catalystAmount" type="text" value="1" autocomplete="off">
+              </label>
+              <label>
+                Catalyst
+                <input id="catalystName" type="text" value="H2SO4" autocomplete="off">
+              </label>
+            </div>
+          </div>
+
+          <div class="field-section">
+            <div class="field-section-title">Reaction conditions</div>
+            <div class="field-grid">
+              <label>
+                Temperature
+                <input id="temperature" type="text" value="90C" autocomplete="off">
+              </label>
+              <label>
+                Time
+                <input id="timeValue" type="text" value="4h" autocomplete="off">
+              </label>
+              <label>
+                Pressure
+                <input id="pressure" type="text" value="1 atm" autocomplete="off">
+              </label>
+              <label>
+                Stirring
+                <input id="stirring" type="text" value="300 rpm" autocomplete="off">
+              </label>
+              <label>
+                pH
+                <input id="ph" type="text" value="2" autocomplete="off">
+              </label>
+              <label>
+                Catalyst role
+                <select id="catalystRole">
+                  <option value="acid_catalyst">acid_catalyst</option>
+                  <option value="base_catalyst">base_catalyst</option>
+                  <option value="strong_acid">strong_acid</option>
+                  <option value="weak_acid">weak_acid</option>
+                  <option value="strong_base">strong_base</option>
+                  <option value="weak_base">weak_base</option>
+                  <option value="hydrogenation_catalyst">hydrogenation_catalyst</option>
+                  <option value="metal_catalyst">metal_catalyst</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <details class="preview-panel">
+            <summary>Generated backend input</summary>
+            <pre id="formulaPreview"></pre>
+          </details>
+
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit" id="analyzeButton">
+              Analyze
+            </button>
+            <button class="btn btn-secondary" type="button" id="sampleButton">
+              Sample
+            </button>
+            <button class="btn btn-secondary" type="button" id="exportPdf">
+              Export PDF
+            </button>
+          </div>
+        </form>
+
+        <div class="quick-panel">
+          <div class="panel-title">
+            <span>Model controls</span>
+            <button class="icon-btn" type="button" id="refreshModel" aria-label="Refresh model status" title="Refresh model status">
+              R
+            </button>
+          </div>
+          <p id="modelMessage">Model status will appear here.</p>
+          <div id="modelStats" class="model-stats">
+            <span>Accuracy: --</span>
+            <span>Rows: --</span>
+          </div>
+          <button class="btn btn-secondary full" type="button" id="trainModel">
+            Train compatibility model
+          </button>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <nav class="top-menu" aria-label="Main menu">
+          <button class="menu-btn active" type="button" data-view="workspaceView" data-i18n="menu.workspace">Workspace</button>
+          <button class="menu-btn" type="button" data-view="newsView" data-i18n="menu.news">Chemical news</button>
+          <button class="menu-btn" type="button" data-view="trainingView" data-i18n="menu.training">ML training</button>
+          <div class="language-switcher" aria-label="Language">
+            <button class="lang-btn active" type="button" data-lang="en">EN</button>
+            <button class="lang-btn" type="button" data-lang="fr">FR</button>
+          </div>
+        </nav>
+
+        <div id="workspaceView" class="view-panel active">
+        <section class="topbar" aria-label="Workspace summary">
+          <div>
+            <p class="eyebrow">Decision support</p>
+            <h2>Evidence-led greener solvent screening</h2>
+          </div>
+          <div class="metric-strip" aria-label="Result metrics">
+            <div class="metric">
+              <span id="metricAlternatives">0</span>
+              <small>Alternatives</small>
+            </div>
+            <div class="metric">
+              <span id="metricValidation">Waiting</span>
+              <small>Validation</small>
+            </div>
+            <div class="metric">
+              <span id="metricReview">Required</span>
+              <small>Human review</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="hero-panel" aria-label="Current state">
+          <div class="molecule-art" aria-hidden="true">
+            <div class="bond b1"></div>
+            <div class="bond b2"></div>
+            <div class="bond b3"></div>
+            <div class="atom a1"></div>
+            <div class="atom a2"></div>
+            <div class="atom a3"></div>
+            <div class="atom a4"></div>
+          </div>
+          <div class="hero-copy">
+            <p class="eyebrow">Safety note</p>
+            <h3 id="resultStatus">Ready for analysis</h3>
+            <p id="resultMessage">Paste reaction notes with solvent, catalyst, role, and conditions to screen greener replacement candidates.</p>
+            <p class="ai-notice">AI-assisted recommendation only. The final decision must be made by the user or a qualified human expert.</p>
+          </div>
+        </section>
+
+        <section class="grid two-col">
+          <div class="section-panel">
+            <div class="section-heading">
+              <h3>Detected input</h3>
+              <span id="compoundCount">0 compounds</span>
+            </div>
+            <div id="compoundList" class="empty-state">No compounds parsed yet.</div>
+            <div id="environmentList" class="chip-grid"></div>
+          </div>
+
+          <div class="section-panel">
+            <div class="section-heading">
+              <h3>Current assessment</h3>
+              <span id="currentSolventTag">No solvent</span>
+            </div>
+            <div id="currentAssessment" class="empty-state">Analysis results will appear here.</div>
+          </div>
+        </section>
+
+        <section class="section-panel simulation-panel">
+          <div class="section-heading">
+            <h3>Replacement simulation</h3>
+            <div class="heading-actions">
+              <button class="simulate-btn" type="button" id="openVisualSimulation">View 3D simulation</button>
+              <span id="simulationTag">No simulation</span>
+            </div>
+          </div>
+          <div id="simulationView" class="empty-state large">
+            <strong>No simulation yet</strong>
+            <span>Run an analysis to see a side-by-side visual comparison of the current formula and a recommended replacement.</span>
+          </div>
+        </section>
+
+        <section class="section-panel alternatives-panel">
+          <div class="section-heading">
+            <h3>Recommended alternatives</h3>
+            <span id="alternativesCount">No results</span>
+          </div>
+          <div id="alternativesList" class="alternatives-list">
+            <div class="empty-state large">
+              <strong>No analysis yet</strong>
+              <span>Run an analysis to compare replacement solvent candidates, compatibility notes, benefits, and evidence.</span>
+            </div>
+          </div>
+        </section>
+        </div>
+
+        <div id="newsView" class="view-panel">
+          <section class="section-panel">
+            <div class="section-heading">
+              <h3>Chemical news</h3>
+              <button class="simulate-btn" type="button" id="refreshNews">Refresh news</button>
+            </div>
+            <div class="news-intro">
+              Recent chemistry and green-chemistry updates for learning and awareness. News does not automatically change recommendations.
+            </div>
+            <div id="newsList" class="news-list">
+              <div class="empty-state large">
+                <strong>No news loaded</strong>
+                <span>Open this menu to load recent chemistry news.</span>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div id="trainingView" class="view-panel">
+          <section class="section-panel">
+            <div class="section-heading">
+              <h3>ML training</h3>
+              <span id="trainingModelTag">Model status</span>
+            </div>
+            <div class="training-grid">
+              <div class="training-card">
+                <h3>When to train</h3>
+                <p>Train the compatibility model after adding new solvents, catalysts, replacement rules, or reaction examples to the backend knowledge base.</p>
+                <p>Do not train just because a user typed a new reaction once. First, a qualified person should review the new data and add it to the curated dataset.</p>
+              </div>
+              <div class="training-card">
+                <h3>Current model</h3>
+                <p id="trainingModelMessage">Model status will appear here.</p>
+                <div id="trainingModelStats" class="training-stats"></div>
+                <button class="btn btn-primary" type="button" id="trainModelTop">Train model now</button>
+              </div>
+              <div class="training-card">
+                <h3>Human decision</h3>
+                <p>ML output is only a signal. The final chemical decision belongs to the user or a qualified human expert.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="modal-backdrop" id="visualModal" aria-hidden="true">
+      <div class="visual-modal" role="dialog" aria-modal="true" aria-labelledby="visualTitle">
+        <div class="visual-header">
+          <div>
+            <p class="eyebrow">Visual simulation</p>
+            <h3 id="visualTitle">Current process vs suggested test</h3>
+          </div>
+          <button class="icon-btn light" type="button" id="closeVisualSimulation" aria-label="Close visual simulation" title="Close">
+            X
+          </button>
+        </div>
+        <canvas id="simulationCanvas" width="1100" height="520"></canvas>
+        <div class="visual-footer">
+          <div id="visualLegend" class="visual-legend"></div>
+          <p>Visual explanation only. This is not a molecular dynamics, kinetics, yield, purity, or safety guarantee.</p>
+        </div>
+      </div>
+    </div>
+    <script src="/static/app.js" defer></script>
+  </body>
+</html>
